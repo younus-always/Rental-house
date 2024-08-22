@@ -36,9 +36,9 @@
         theme: {
           extend: {
             colors: {
-              bg_primary: "rgb(171, 239, 95)",
-              bg_secondary: "rgb(30, 30, 30)",
-              bg_light: "rgba(171, 239, 95, 0.2)",
+              _primary: "rgb(171, 239, 95)",
+              sectio: "rgb(30, 30, 30)",
+              light: "rgba(171, 239, 95, 0.2)",
               // work process color
               first_clr: "rgba(171, 239, 95, 0.2)",
               second_clr: "rgb(239, 218, 110)",
@@ -72,31 +72,29 @@
           <!-- Navbar Center = Section-->
 
           <div class="navbar-center hidden lg:flex">
-            <ul
-              class="menu menu-horizontal border text-lg font-semibold opacity-70"
-            >
+            <ul class="menu menu-horizontal text-lg font-semibold opacity-70">
               <li
-                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-md mx-1"
+                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-lg mx-1"
               >
                 <a href="#" class="text-black font-bold">Home</a>
               </li>
               <li
-                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-md mx-1"
+                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-lg -1"
               >
                 <a href="#">Services</a>
               </li>
               <li
-                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-md mx-1"
+                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-lg mx-1"
               >
                 <a href="#">Profile</a>
               </li>
               <li
-                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-md mx-1"
+                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-lg mx-1"
               >
                 <a href="#">Blogs</a>
               </li>
               <li
-                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-md mx-1"
+                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-lg mx-1"
               >
                 <a href="#">Contact Us</a>
               </li>
@@ -119,7 +117,7 @@
 
             <div class="hidden sm:block flex items-center justify-center group">
               <a
-                class="cursor-pointer py-3 px-6 rounded-full flex items-center bg-lime-300"
+                class="cursor-pointer py-2 px-5 rounded-full flex items-center bg-lime-300"
               >
                 <span class="text-lg lg:text-xl font-bold">Book Consult</span>
 
@@ -196,7 +194,9 @@
               <h1 class="text-3xl sm:text-5xl font-bold sm:w-8/12 mx-auto">
                 A barn house of this design has a striking appearance
               </h1>
-              <p class="py-6 sm:w-11/12 md:w-8/12 lg:w-6/12 mx-auto">
+              <p
+                class="py-6 sm:w-11/12 md:w-8/12 lg:w-9/12 mx-auto font-semibold text-lg text-slate-500"
+              >
                 The barn house captivates with its blend of rustic charm and
                 modern sophistication, featuring weathered wood, sleek metal
                 accents, and large windows that flood the space with natural
@@ -234,17 +234,212 @@
       </section>
       <!--Section end: Banner -->
     </header>
-    <main>
-      <!--Section start: Banner -->
+    <main class="">
+      <!--Section start: About Us -->
 
-      <section>
-        <div></div>
+      <section class="relative bg-gray-100 py-10 sm:py-24">
+        <div class="absolute top-0 left-9 hidden sm:block">
+          <img src="./assets/Vector.png" alt="" />
+        </div>
+        <div
+          class="w-11/12 mx-auto grid items-center justify-between gap-6 grid-cols-1 lg:grid-cols-2"
+        >
+          <div class="text-center sm:text-start">
+            <button
+              class="bg-white rounded-3xl py-2 px-6 text-lg font-semibold hover:shadow-lg transition-shadow duration-300 ease-in-out active:scale-95"
+            >
+              <i class="fa-solid fa-arrow-right-long mr-2"></i> About Us
+            </button>
+            <h2 class="text-3xl sm:text-5xl font-bold my-6">
+              We design thoughtful, liveable spaces
+            </h2>
+            <p class="text-lg font-semibold text-slate-500 mb-6">
+              The barn house captivates with its blend of rustic charm and
+              modern sophistication, featuring weathered wood, sleek metal
+              accents.
+            </p>
+            <div class="flex flex-col sm:flex-row lg:flex-col gap-4">
+              <!-- Card-commercial -->
+              <div
+                class="shadow-lg p-7 rounded-xl flex lg:items-center items-start gap-3"
+              >
+                <div class="">
+                  <img
+                    src="./assets/commercial.png"
+                    alt="commercial building"
+                  />
+                </div>
+                <div class="text-start">
+                  <h5 class="text-xl font-bold mb-2">Commercial</h5>
+                  <p class="lg:w-7/12 text-lg text-slate-600">
+                    The barn house captivates with its blend of rustic charm and
+                    modern.
+                  </p>
+                </div>
+              </div>
+              <!-- Card-residential -->
+              <div
+                class="shadow-lg p-7 rounded-xl flex lg:items-center items-start gap-3"
+              >
+                <div>
+                  <img src="./assets/residential.png" alt="" />
+                </div>
+                <div class="text-start">
+                  <h5 class="text-xl font-bold mb-2">Residential</h5>
+                  <p class="lg:w-7/12 text-lg text-slate-600">
+                    The barn house captivates with its blend of rustic charm and
+                    modern.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Right Image -->
+          <div class="flex items-center justify-center">
+            <img src="./assets/Rectangle.png" alt="" />
+          </div>
+        </div>
       </section>
-      <!--Section end: Banner -->
+      <!--Section end: About Us -->
+
+      <!-- Section start: Counting -->
+      <section class="bg-gray-100 pt-5 pb-20">
+        <div
+          class="w-11/12 bg-white mx-auto py-6 rounded-xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          <div class="px-6 py-8 text-center">
+            <p><i class="fa-regular fa-message text-3xl"></i></p>
+            <h3 class="text-4xl font-bold my-2">235+</h3>
+            <p class="text-lg text-slate-500 font-semibold">
+              Happy Client Review
+            </p>
+          </div>
+          <div class="px-6 py-8 text-center">
+            <p><i class="fa-regular fa-building text-3xl"></i></p>
+            <h3 class="text-4xl font-bold my-2">50k+</h3>
+            <p class="text-lg text-slate-500 font-semibold">Work Departments</p>
+          </div>
+          <div class="px-6 py-8 text-center">
+            <p><i class="fa-solid fa-users text-3xl"></i></p>
+            <h3 class="text-4xl font-bold my-2">30+</h3>
+            <p class="text-lg text-slate-500 font-semibold">
+              Our Happpy Client
+            </p>
+          </div>
+          <div class="px-6 py-8 text-center">
+            <p><i class="fa-solid fa-user-tie text-3xl"></i></p>
+            <h3 class="text-4xl font-bold my-2">307+</h3>
+            <p class="text-lg text-slate-500 font-semibold">Staff Members</p>
+          </div>
+        </div>
+      </section>
+      <!-- Section end: Counting -->
+
+      <!-- Section start: Work process -->
+      <section class="bg-gray-100">
+        <div class="w-11/12 mx-auto pb-20">
+          <div class="text-center mb-12">
+            <button
+              class="bg-white rounded-3xl py-2 px-6 text-lg font-semibold hover:shadow-lg transition-shadow duration-300 ease-in-out active:scale-95"
+            >
+              <i class="fa-solid fa-arrow-right-long mr-2"></i>How we works
+            </button>
+            <h2 class="text-3xl sm:text-5xl font-bold my-6">
+              Our Work Process
+            </h2>
+            <p
+              class="text-lg font-semibold text-slate-500 mb-6 md:w-8/12 mx-auto"
+            >
+              The barn house captivates with its blend of rustic charm and
+              modern sophistication, featuring weathered wood, sleek metal
+              accents.
+            </p>
+          </div>
+          <!-- (Process card wrapper) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- card-1 -->
+            <div class="shadow-xl rounded-3xl bg-pink-300">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./assets/concept.png"
+                  alt="light photo"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title font-bold text-2xl">Concept</h2>
+                <p class="text-lg font-semibold text-stone-600">
+                  The barn house captivates with its blend of rustic charm and
+                  modern.
+                </p>
+              </div>
+            </div>
+
+            <!-- card-2 -->
+            <div class="shadow-xl rounded-3xl bg-yellow-200">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./assets/flow-chart.png"
+                  alt="light photo"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title font-bold text-2xl">Design Process</h2>
+                <p class="text-lg font-semibold text-stone-600">
+                  The barn house captivates with its blend of rustic charm and
+                  modern.
+                </p>
+              </div>
+            </div>
+
+            <!-- card-3 -->
+            <div class="shadow-xl rounded-3xl bg-emerald-300">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./assets/vision.png"
+                  alt="light photo"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title font-bold text-2xl">Supervision</h2>
+                <p class="text-lg font-semibold text-stone-600">
+                  The barn house captivates with its blend of rustic charm and
+                  modern.
+                </p>
+              </div>
+            </div>
+
+            <!-- card-4 -->
+            <div class="shadow-xl rounded-3xl bg-sky-400">
+              <figure class="px-10 pt-10">
+                <img
+                  src="./assets/budget-planning.png"
+                  alt="light photo"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title font-bold text-2xl">Budget Planning</h2>
+                <p class="text-lg font-semibold text-stone-600">
+                  The barn house captivates with its blend of rustic charm and
+                  modern.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section end: Work process -->
+
+      <!-- Section start:   -->
+      <section></section>
+      <!-- Section end:   -->
     </main>
 
     <footer>
-        <div></div>
+      <div></div>
     </footer>
   </body>
 </html>

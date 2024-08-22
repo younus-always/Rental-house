@@ -54,7 +54,7 @@
       };
     </script>
   </head>
-  <body class="font-display h-[12000px]">
+  <body class="font-display">
     <header
       class="min-h-screen bg-gradient-to-b from-slate-50 from-0% to-slate-100 to-90%"
     >
@@ -191,7 +191,9 @@
               <img src="./assets/banner.png" alt="" />
             </div>
             <div class="text-center">
-              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold sm:w-9/12 lg:w-8/12 mx-auto">
+              <h1
+                class="text-3xl sm:text-4xl lg:text-5xl font-bold sm:w-9/12 lg:w-8/12 mx-auto"
+              >
                 A barn house of this design has a striking appearance
               </h1>
               <p
@@ -830,13 +832,11 @@
                   class="sm:col-span-2 py-3 w-full h-44 resize-none px-4 rounded-3xl bg-white focus:outline-none focus:border-lime-300 border"
                   name=""
                   id=""
-                  placeholder="Write your messeage here"
+                  placeholder="Write your messeage here ..."
                 ></textarea>
               </div>
               <div class="sm:col-span-2 rounded-lg">
-                <div
-                  class="flex items-center justify-center group"
-                >
+                <div class="flex items-center justify-center group">
                   <a
                     class="cursor-pointer py-2 px-5 rounded-full w-full flex items-center justify-center bg-lime-300"
                   >
@@ -867,8 +867,60 @@
       </section>
     </main>
 
-    <footer>
-      <div></div>
+    <!-- Footer Area -->
+    <footer class="bg-stone-900">
+      <div class="w-11/12 mx-auto py-14 text-center">
+        <div class="navbar-start flex items-center justify-center w-full">
+          <a
+            class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white flex items-center"
+            ><i
+              class="fa-solid fa-arrow-up-long bg-lime-300 rounded-full text-lg w-9 h-9 text-stone-800 flex items-center justify-center rotate-45 mt-1 mr-3"
+            ></i>
+            Rinterio</a
+          >
+        </div>
+        <p
+          class="text-stone-500 font-semibold text-lg mt-5 sm:w-9/12 lg:w-7/12 mx-auto"
+        >
+          The barn house captivates with its blend of rustic charm and modern
+          sophistication, featuring weathered wood, sleek metal accents.
+        </p>
+        <ul
+          class="sm:flex items-center justify-between sm:w-9/12 mx-auto font-semibold text-lg text-stone-300 space-y-3 sm:space-y-0 my-5 sm:my-8"
+        >
+          <li class="hover:underline transition-all duration-300 ease-in-out"><a href="#">Home</a></li>
+          <li class="hover:underline transition-all duration-300 ease-in-out"><a href="#">Services</a></li>
+          <li class="hover:underline transition-all duration-300 ease-in-out"><a href="#">Portfolio</a></li>
+          <li class="hover:underline transition-all duration-300 ease-in-out"><a href="#">Blogs</a></li>
+          <li class="hover:underline transition-all duration-300 ease-in-out"><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="inline-block">
+          <div class="flex items-center justify-center group">
+            <a
+              class="cursor-pointer py-2 px-5 rounded-full flex items-center bg-lime-300"
+            >
+              <span class="text-lg lg:text-xl font-bold">Book Consult</span>
+  
+              <div
+                class="relative w-8 h-8 flex items-center justify-center ml-2 bg-slate-800 text-white rounded-full group-hover:bg-slate-50 transition-all duration-300 ease-in-out overflow-hidden"
+              >
+                <!-- <span class="rotate-45 absolute group-hover:left-8 group-hover:-top-5 "> -->
+                <span
+                  class="rotate-45 absolute left-2.5 top-1 transition-all duration-300 ease-in-out group-hover:left-8 group-hover:-top-5"
+                >
+                  <i class="fa-solid fa-arrow-up-long"></i>
+                </span>
+                <!-- <span class=" rotate-45 -bottom-3 -left-2.5 absolute"> -->
+                <span
+                  class="rotate-45 -bottom-4 -left-2.5 absolute group-hover:bottom-1.5 group-hover:left-3 transition-all duration-300 ease-in-out"
+                >
+                  <i class="fa-solid fa-arrow-up-long text-slate-700"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

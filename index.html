@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Architect Website</title>
-    <!-- Link: Tailwind css & DaisyUI -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <title>Rinterio - Rental house for you</title>
+    
     <!-- Font: google-font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,33 +21,32 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Tilwind css - customization -->
+    <link rel="shortcut icon" href="./assets/rental-house-favicon-color.webp" type="image/x-icon">
+    <!-- Link: Tailwind css & DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tilwind config file - customization -->
     <script>
-      /** @type {import('tailwindcss').Config} */
-      module.exports = {
-        content: ["./src/**/*.{html,js}"],
+      tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              _primary: "rgb(171, 239, 95)",
-              sectio: "rgb(30, 30, 30)",
-              light: "rgba(171, 239, 95, 0.2)",
-              // work process color
-              first_clr: "rgba(171, 239, 95, 0.2)",
-              second_clr: "rgb(239, 218, 110)",
-              third_clr: "rgb(164, 218, 195)",
-              fourth_clr: "rgb(119, 170, 234)",
-            },
             fontFamily: {
-              display: "Manrope",
+              rope: 'Manrope',
             },
+            bacgroundImage: {
+              custom: "url('./assets/bg.jpg')",
+            }
           },
         },
-        plugins: [],
-      };
+      }
     </script>
   </head>
-  <body class="font-display">
+  <body class="font-rope">
     <header
       class="min-h-screen bg-gradient-to-b from-slate-50 from-0% to-slate-100 to-90%"
     >
@@ -74,29 +66,29 @@
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal text-lg font-semibold opacity-70">
               <li
-                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-lg mx-1"
+                class="hover:bg-lime-300 transition-all duration-300 ease-in rounded-lg mx-1 text-stone-800 font-bold"
               >
-                <a href="#" class="text-black font-bold">Home</a>
+                <a href="#">Home</a>
               </li>
               <li
-                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-lg -1"
+                class="hover:bg-lime-300 transition-all duration-300 ease-in rounded-lg -1 mx-1"
               >
-                <a href="#">Services</a>
+                <a href="#service">Services</a>
               </li>
               <li
-                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-lg mx-1"
+                class="hover:bg-lime-300 transition-all duration-300 ease-in rounded-lg mx-1"
               >
-                <a href="#">Profile</a>
+                <a href="#portfolio">Portfolio</a>
               </li>
               <li
-                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-lg mx-1"
+                class="hover:bg-lime-300 transition-all duration-300 ease-in rounded-lg mx-1"
               >
-                <a href="#">Blogs</a>
+                <a href="#blog">Blogs</a>
               </li>
               <li
-                class="hover:bg-lime-300 transition-colors duration-300 ease-in rounded-lg mx-1"
+                class="hover:bg-lime-300 transition-all duration-300 ease-in rounded-lg mx-1"
               >
-                <a href="#">Contact Us</a>
+                <a href="#contact">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -124,13 +116,11 @@
                 <div
                   class="relative w-8 h-8 flex items-center justify-center ml-2 bg-slate-800 text-white rounded-full group-hover:bg-slate-50 transition-all duration-300 ease-in-out overflow-hidden"
                 >
-                  <!-- <span class="rotate-45 absolute group-hover:left-8 group-hover:-top-5 "> -->
                   <span
                     class="rotate-45 absolute left-2.5 top-1 transition-all duration-300 ease-in-out group-hover:left-8 group-hover:-top-5"
                   >
                     <i class="fa-solid fa-arrow-up-long"></i>
                   </span>
-                  <!-- <span class=" rotate-45 -bottom-3 -left-2.5 absolute"> -->
                   <span
                     class="rotate-45 -bottom-4 -left-2.5 absolute group-hover:bottom-1.5 group-hover:left-3 transition-all duration-300 ease-in-out"
                   >
@@ -139,12 +129,12 @@
                 </div>
               </a>
             </div>
-
+            <!-- Dropdown menu -->
             <div class="dropdown sm:ml-3">
               <div
                 tabindex="0"
                 role="button"
-                class="btn bg-white rounded-full lg:hidden"
+                class="btn bg-white rounded-full lg:hidden shadow-xl focus:shadow focus:shadow-lime-300"
               >
                 <i class="fa-solid fa-bars"></i>
               </div>
@@ -160,22 +150,22 @@
                 <li
                   class="hover:bg-lime-300 transition-colors duration-300 rounded-md my-1"
                 >
-                  <a href="#" class="font-semibold text-lg">Services</a>
+                  <a href="#service" class="font-semibold text-lg">Services</a>
                 </li>
                 <li
                   class="hover:bg-lime-300 transition-colors duration-300 rounded-md my-1"
                 >
-                  <a href="#" class="font-semibold text-lg">Profile</a>
+                  <a href="#portfolio" class="font-semibold text-lg">Portfolio</a>
                 </li>
                 <li
                   class="hover:bg-lime-300 transition-colors duration-300 rounded-md my-1"
                 >
-                  <a href="#" class="font-semibold text-lg">Blogs</a>
+                  <a href="#blog" class="font-semibold text-lg">Blogs</a>
                 </li>
                 <li
                   class="hover:bg-lime-300 transition-colors duration-300 rounded-md my-1"
                 >
-                  <a href="#" class="font-semibold text-lg">Contact Us</a>
+                  <a href="#contact" class="font-semibold text-lg">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -433,7 +423,7 @@
       </section>
 
       <!-- Section: Latest Portfolio  -->
-      <section>
+      <section id="portfolio">
         <div class="w-11/12 mx-auto py-10 sm:py-20">
           <!-- section Header -->
           <div class="text-center mb-12">
@@ -567,8 +557,89 @@
         </div>
       </section>
 
+      <!-- Section: Our Services -->
+      <section id="service" class="bg-gray-50">
+        <div class="w-11/12 mx-auto py-10 sm:py-20 ">
+         <!-- section Header -->
+         <div class="text-center mb-12">
+          <button
+            class="bg-lime-100 rounded-3xl py-2 px-6 text-lg font-semibold hover:shadow-lg transition-shadow duration-300 ease-in-out active:scale-95"
+          >
+            <i class="fa-solid fa-arrow-right-long mr-2"></i>Rinterio Service
+          </button>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold my-6">
+            Explore Our Services
+          </h2>
+          <p
+            class="text-lg font-semibold text-slate-500 mb-6 md:w-8/12 mx-auto"
+          >
+            The barn house captivates with its blend of rustic charm and
+            modern sophistication, featuring weathered wood, sleek metal
+            accents.
+          </p>
+        </div>
+  
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white text-center p-6 shadow-lg rounded-lg relative overflow-hidden
+          before:content[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-1 before:bg-lime-500
+          before:hover:w-full before:transition-all before:duration-200 before:ease-out ">
+            <div class="w-16 mx-auto">
+              <img src="./assets/house.png" alt="">
+            </div>
+            <h3 class="font-bold text-3xl my-4">Property Management</h3>
+            <p class="font-semibold text-stone-600 mb-3">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home</p>
+          </div>
+          <div class="bg-white text-center p-6 shadow-lg rounded-lg relative overflow-hidden
+          before:content[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-1 before:bg-lime-500
+          before:hover:w-full before:transition-all before:duration-200 before:ease-out ">
+            <div class="w-16 mx-auto">
+              <img src="./assets/24-hours-support.png" alt="">
+            </div>
+            <h3 class="font-bold text-3xl my-4">Consulting Service</h3>
+            <p class="font-semibold text-stone-600 mb-3">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home</p>
+          </div>
+          <div class="bg-white text-center p-6 shadow-lg rounded-lg relative overflow-hidden
+          before:content[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-1 before:bg-lime-500
+          before:hover:w-full before:transition-all before:duration-200 before:ease-out ">
+            <div class="w-16 mx-auto">
+              <img src="./assets/loan.png" alt="">
+            </div>
+            <h3 class="font-bold text-3xl my-4">Home Selling</h3>
+            <p class="font-semibold text-stone-600 mb-3">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home</p>
+          </div>
+          <div class="bg-white text-center p-6 shadow-lg rounded-lg relative overflow-hidden
+          before:content[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-1 before:bg-lime-500
+          before:hover:w-full before:transition-all before:duration-200 before:ease-out ">
+            <div class="w-16 mx-auto">
+              <img src="./assets/mortgage.png" alt="">
+            </div>
+            <h3 class="font-bold text-3xl my-4">Mortgage Service</h3>
+            <p class="font-semibold text-stone-600 mb-3">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home</p>
+          </div>         
+          <div class="bg-white text-center p-6 shadow-lg rounded-lg relative overflow-hidden
+          before:content[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-1 before:bg-lime-500
+          before:hover:w-full before:transition-all before:duration-200 before:ease-out ">
+            <div class="w-16 mx-auto">
+              <img src="./assets/home.png" alt="">
+            </div>
+            <h3 class="font-bold text-3xl my-4">Home Buying</h3>
+            <p class="font-semibold text-stone-600 mb-3">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home</p>
+          </div>
+          <div class="bg-white text-center p-6 shadow-lg rounded-lg relative overflow-hidden
+          before:content[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-1 before:bg-lime-500
+          before:hover:w-full before:transition-all before:duration-200 before:ease-out ">
+            <div class="w-16 mx-auto">
+              <img src="./assets/official-documents.png" alt="">
+            </div>
+            <h3 class="font-bold text-3xl my-4">Escrow Services</h3>
+            <p class="font-semibold text-stone-600 mb-3">over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
       <!-- Section: News & Article -->
-      <section class="bg-gray-100">
+      <section class="bg-gray-100" id="blog">
         <div class="w-11/12 mx-auto py-10 sm:py-20">
           <!-- section Header -->
           <div class="text-center mb-12">
@@ -589,7 +660,9 @@
             </p>
           </div>
 
+          <!-- Article card container -->
           <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+
             <!-- Article card-1 -->
             <div
               class="p-6 bg-white rounded-xl sm:flex sm:flex-row lg:flex-col gap-5"
@@ -763,10 +836,10 @@
       </section>
 
       <!-- Section: Let's Connect -->
-      <section
-        class="bg-[url('./assets/bg.png')] bg-cover bg-center bg-no-repeat"
+      <section id="contact"
+        class="bg-[url('./assets/bg.jpg')] bg-cover bg-center bg-no-repeat relative"
       >
-        <div class="w-11/12 mx-auto py-10 sm:py-20">
+        <div class="w-11/12 mx-auto pt-10 sm:pt-20 pb-44">
           <!-- section Header -->
           <div class="text-center mb-12">
             <button
@@ -792,7 +865,7 @@
             >
               <div>
                 <input
-                  class="w-full py-3 px-4 rounded-3xl bg-white focus:outline-none focus:border-lime-300 border"
+                  class="w-full py-3 px-4 rounded-3xl bg-white focus:outline-none focus:border-lime-300 border focus:shadow-xl focus:placeholder-transparent"
                   class="w-full"
                   type="text"
                   name=""
@@ -802,7 +875,7 @@
               </div>
               <div>
                 <input
-                  class="w-full py-3 px-4 rounded-3xl bg-white focus:outline-none focus:border-lime-300 border"
+                  class="w-full py-3 px-4 rounded-3xl bg-white focus:outline-none focus:border-lime-300 border focus:shadow-xl focus:placeholder-transparent"
                   type="text"
                   name=""
                   id=""
@@ -811,7 +884,7 @@
               </div>
               <div>
                 <input
-                  class="w-full py-3 px-4 rounded-3xl bg-white focus:outline-none focus:border-lime-300 border"
+                  class="w-full py-3 px-4 rounded-3xl bg-white focus:outline-none focus:border-lime-300 border focus:shadow-xl focus:placeholder-transparent"
                   type="text"
                   name=""
                   id=""
@@ -820,7 +893,7 @@
               </div>
               <div>
                 <input
-                  class="w-full py-3 px-4 rounded-3xl bg-white focus:outline-none focus:border-lime-300 border"
+                  class="w-full py-3 px-4 rounded-3xl bg-white focus:outline-none focus:border-lime-300 border focus:shadow-xl focus:placeholder-transparent"
                   type="text"
                   name=""
                   id=""
@@ -829,7 +902,7 @@
               </div>
               <div class="sm:col-span-2">
                 <textarea
-                  class="sm:col-span-2 py-3 w-full h-44 resize-none px-4 rounded-3xl bg-white focus:outline-none focus:border-lime-300 border"
+                  class="sm:col-span-2 py-3 w-full h-44 resize-none px-4 rounded-3xl bg-white focus:outline-none focus:border-lime-300 border focus:shadow-xl focus:placeholder-transparent"
                   name=""
                   id=""
                   placeholder="Write your messeage here ..."
@@ -863,13 +936,31 @@
               </div>
             </form>
           </div>
+          <!-- Looking for a home overlay section -->
+         <div class="flex justify-center items-center">
+          <div class="absolute -bottom-24 grid grid-cols-1 lg:grid-cols-2 gap-2 text-center lg:text-start w-11/12 lg:w-10/12 mx-auto
+          p-6 lg:p-12 bg-lime-300 rounded-lg">
+            <div>
+              <h2 class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold capitalize">Looking for a dream home</h2>
+            <p class="font-semibold my-3">We can help you realize your dream of a new home</p>
+          </div>
+            <div class="text-center flex items-center justify-center lg:justify-end">
+              <button
+                class="bg-yellow-200 rounded-3xl py-3 px-8 text-lg font-semibold shadow-lg active:scale-105 relative overflow-hidden"
+              >
+                Let's Explore <i class="fa-solid fa-arrow-right-long ml-2"></i>
+              </button>
+            </div>   
+            
+        </div>
+         </div>
         </div>
       </section>
     </main>
 
     <!-- Footer Area -->
     <footer class="bg-stone-900">
-      <div class="w-11/12 mx-auto py-14 text-center">
+      <div class="w-11/12 mx-auto pt-36 pb-12 text-center">
         <div class="navbar-start flex items-center justify-center w-full">
           <a
             class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white flex items-center"
